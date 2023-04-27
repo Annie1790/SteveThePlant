@@ -1,0 +1,25 @@
+@use "mixin";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    opacity: 0.5;
+    background-image: linear-gradient(#90c896 1.5px, transparent 1.5px), linear-gradient(to right, #90c896 1.5px, whitesmoke 1.5px);
+    background-size: 30px 30px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    @include mixin.centerDiv();
+}
+
+#root {
+    @include mixin.centerDiv();
+    @include mixin.boxShadow();
+    @include mixin.borderRadius();
+    width: 400px;
+    height: 600px;
+
+}
