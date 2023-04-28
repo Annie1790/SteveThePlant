@@ -1,8 +1,10 @@
 @use "mixin";
 
 #buttons {
-    grid-row: 2 / 5;
+    position: relative;
+    grid-row: 2 / 3;
     grid-column: 1 / span 3;
+    background-color: rgba(34, 195, 155, 0.44);
 
     //Another grid for button positions
     display: grid;
@@ -10,12 +12,30 @@
     grid-template-rows: repeat(3, auto);
 
     //Actual button styling
-    div {
+    #moisture,
+    #temperature,
+    #emoji {
         @include mixin.centerDiv();
+    }
 
-        svg {
-            @include mixin.borderRadius();
-            border: 1px solid rgb(107, 173, 104);
-        }
+    .buttonBox {
+        @include mixin.borderRadius();
+        @include mixin.centerDiv();
+        @include mixin.fade();
+        width: 80px;
+        height: 80px;
+        flex-direction: column;
+        border: 1px solid rgb(114, 184, 100);
+        background-color: aliceblue;
+    }
+
+    .buttonBox:hover,
+    .buttonBox:focus,
+    .buttonBox:active {
+        @include mixin.fadeHover();
+    }
+
+    svg {
+        filter: invert(26%) sepia(51%) saturate(476%) hue-rotate(115deg) brightness(96%) contrast(93%);
     }
 }

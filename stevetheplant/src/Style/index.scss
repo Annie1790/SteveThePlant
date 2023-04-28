@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    @include mixin.font();
 }
 
 body {
@@ -22,7 +23,7 @@ body {
     background-color: aliceblue;
     display: grid;
     grid-template-columns:repeat(3, auto);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: 150px auto 50px;
 }
 
 @media (min-width: 300px) and (max-width:600px) {

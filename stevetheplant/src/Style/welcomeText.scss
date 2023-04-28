@@ -17,7 +17,8 @@
     grid-row: 1;
 
     h1 {
-        margin: 0.5rem;
+        margin: 1rem;
+        font-size: 40px;
     }
 }
 
@@ -29,4 +30,12 @@
     svg {
         filter: invert(91%) sepia(5%) saturate(3389%) hue-rotate(59deg) brightness(100%) contrast(71%);
     }
+}
+
+#plantBackground {
+    position: absolute;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    z-index: 0;
+    opacity: 0.05;
 }
