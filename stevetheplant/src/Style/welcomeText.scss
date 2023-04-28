@@ -1,0 +1,32 @@
+@use "mixin";
+
+#header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    /*Another grid for placing header text and plant in different positions*/
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 0.1fr);
+    background: rgb(34, 195, 155);
+    background: linear-gradient(0deg, rgba(34, 195, 155, 0.44021358543417366) 0%, rgba(192, 253, 45, 0) 100%);
+}
+
+#headerText {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+
+    h1 {
+        margin: 0.5rem;
+    }
+}
+
+#headerSvg {
+    grid-column: 2;
+    grid-row: 2;
+    @include mixin.centerDiv();
+
+    svg {
+        filter: invert(91%) sepia(5%) saturate(3389%) hue-rotate(59deg) brightness(100%) contrast(71%);
+    }
+}

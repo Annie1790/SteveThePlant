@@ -6,7 +6,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-//Other components
+//Components
+import WelcomeText from './components/welcomeText';
+import Buttons from './components/buttons';
+
+//Error handling
 import ErrorPage from "./components/errorHandling";
 
 //SASS 
@@ -15,7 +19,11 @@ import "./Style/index.scss";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello</div>,
+    element:
+      <>
+        <WelcomeText />
+        <Buttons />
+      </>,
     errorElement: <ErrorPage />,
   },
 
